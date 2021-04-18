@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body {
+  background-color: hsl(273, 75%, 66%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.big-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.inner-container {
+  width: 75%;
+  height: 70%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.left img {
+  position: absolute;
+  left: -90;
+  bottom: 112;
+}
+.box {
+  position: absolute;
+  z-index: 111;
+  left: 3%;
+  bottom: 35%;
+}
+
+.right {
+  margin-top: 50px;
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.right .inner-right {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  padding: 50px;
+}
+#faq {
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.inner-right .theQuestion {
+  float: left;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.inner-right .theQuestion:hover {
+  color: hsl(14, 88%, 65%);
+}
+.arrow {
+  float: right;
+  cursor: pointer;
+}
+.inner-right .bottom-border {
+  margin-top: 20px;
+}
+.inner-right .q-div {
+  color: hsl(238, 29%, 16%);
+  height: auto;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+.inner-right .theAnswer {
+  margin-top: 15px;
+  opacity: 0.5;
+  width: 95%;
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 600px) {
+  .left {
+    overflow: hidden;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: right -20% bottom 25%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+  .big-container {
+    width: 100%;
+    height: 70%;
+  }
+  .inner-container {
+    width: 90%;
+    height: 80%;
+    margin-top: 150px;
+  }
+  .left {
+    width: 100%;
+    overflow: unset;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: right 55% top 0;
+    height: auto;
+  }
+  .left img {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: -100;
+  }
+
+  .box {
+    width: 25%;
+    left: 18%;
+    top: 21.5%;
+  }
+
+  .right {
+    width: 100%;
+  }
+  #faq {
+    text-align: center;
+    font-size: 35px;
+  }
+  .inner-right .theQuestion {
+    width: 93%;
+  }
+}
